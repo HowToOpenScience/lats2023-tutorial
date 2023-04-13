@@ -55,7 +55,8 @@ mkdocs serve
 ```
 
 [badge]: https://img.shields.io/badge/OSF-10.17605%2Fosf.io%2Fjp6cq-blue
-[osf]: https://doi.org/10.17605/osf.io/jp6cq
+<!-- TODO: Replace with DOI when working -->
+[osf]: https://osf.io/jp6cq
 
 [lats]: https://learningatscale.acm.org/las2023/
 
