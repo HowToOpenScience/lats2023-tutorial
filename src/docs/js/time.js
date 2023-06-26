@@ -1,5 +1,5 @@
-// Regex syntax for timestamp: Prefix#Display Time# $Time Zone Format$Suffix
-const TIME_FORMAT_REGEX = /(.*)#(.+)# \$(\d{4}-\d{2}-\d{2}) ((?:\d{2}:\d{2}:\d{2}-\d{2}:\d{2}:\d{2},?)+) (\w+)\$(.*)/g;
+// Regex syntax for timestamp: Prefix#Display Time# $Time Zone Offset$Suffix
+const TIME_FORMAT_REGEX = /(.*)#(.+)# \$(\d{4}-\d{2}-\d{2}) ((?:\d{2}:\d{2}:\d{2}-\d{2}:\d{2}:\d{2},?)+) ((?:\+|\-)\d{2}:\d{2})\$(.*)/g;
 
 // Get all classes for formatting time
 var time_replace = document.getElementsByClassName("time_format");
@@ -8,7 +8,7 @@ for (var i = 0; i < time_replace.length; i++) {
     // Get matches for time format
     var matches = [...time_replace[i].innerHTML.matchAll(TIME_FORMAT_REGEX)][0];
     var prefix = matches[1],
-        display = matches[2]
+        display = matches[2],
         date = matches[3],
         time_periods = matches[4].split(','),
         time_zone = matches[5],
@@ -21,8 +21,8 @@ for (var i = 0; i < time_replace.length; i++) {
     for (var time_period = 0; time_period < time_periods.length; time_period++) {
         // Time (HH:mm:ss)
         var times = time_periods[time_period].split('-');
-        var start_time = new Date(`${date} ${times[0]} ${time_zone}`);
-        var end_time = new Date(`${date} ${times[1]} ${time_zone}`);
+        var start_time = new Date(`${date}T${times[0]}.000${time_zone}`);
+        var end_time = new Date(`${date}T${times[1]}.000${time_zone}`);
 
         // Get first date information
         if (first_date === undefined) {

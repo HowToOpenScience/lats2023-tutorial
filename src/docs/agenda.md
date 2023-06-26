@@ -1,8 +1,5 @@
 # Agenda
 
-!!! note
-    This section is currently under development. The information provided is subject to change.
-
 The times provided are approximated for the maximum amount of time spent on each section. The sections may be shorter depending on the session.
 
 1. **Introduction to Open Science Practices (Lecture)** - 80 minutes
@@ -24,9 +21,12 @@ The times provided are approximated for the maximum amount of time spent on each
     1. What software do you use?
     1. Reproducibility as relevant to the participants
     1. Break and Q&A
-1. **Fixing Reproducibility within Others Work (Interactive)** - 30 minutes
-    1. To Be Determined (TBD)
-    1. To Be Determined (TBD)
+1. **Audience Choice (Interactive)** - 30 minutes
+    1. Examples include:
+        * Applications in Existing Papers
+        * Understanding Git
+        * Understanding Docker
+        * etc.
 
 ## Tutorial Structure
 
